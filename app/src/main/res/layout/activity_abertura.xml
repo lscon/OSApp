@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
+    android:theme="@android:style/Theme.Black.NoTitleBar"
     tools:context="br.edu.iff.pooa20172.osapp.activity.ActivityAbertura">
 
     <ImageView
@@ -15,6 +16,7 @@
         android:src="@drawable/logo" />
 
     <TextView
+        android:id="@+id/tvVersao"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
