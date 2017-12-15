@@ -3,12 +3,16 @@ package br.edu.iff.pooa20172.osapp.activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 import br.edu.iff.pooa20172.osapp.R;
+import br.edu.iff.pooa20172.osapp.adapter.ChamadoAdapter;
+import br.edu.iff.pooa20172.osapp.adapter.EventoAdapter;
 import br.edu.iff.pooa20172.osapp.model.Chamado;
 import br.edu.iff.pooa20172.osapp.model.Evento;
 
@@ -32,6 +36,14 @@ public class ActivityDetalhe extends AppCompatActivity {
         tvDescricao.setText(descricao);
         tvSetor.setText(setor);
         tvUsuario.setText(usuario);
+
+        ListView lista = (ListView) findViewById(R.id.lvEventos);
+
+        final ArrayList<Evento> eventos = adicionaEventos();
+
+        ArrayAdapter adapter = new EventoAdapter(this, eventos);
+
+        lista.setAdapter(adapter);
     }
 
     private ArrayList<Evento> adicionaEventos() {

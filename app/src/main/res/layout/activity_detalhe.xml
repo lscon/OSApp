@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
+    android:orientation="vertical"
     tools:context="br.edu.iff.pooa20172.osapp.activity.ActivityDetalhe">
 
 
+    <TextView
+        android:id="@+id/tvDetalhesChamado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Detalhes do chamado"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
@@ -25,9 +37,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="descricao"
-            android:textAlignment="center"
+            android:textAlignment="viewStart"
             android:textColor="@android:color/background_light"
-            android:textSize="30sp"
+            android:textSize="20sp"
             tools:layout_editor_absoluteX="134dp"
             tools:layout_editor_absoluteY="65dp" />
 
@@ -36,9 +48,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="usuario"
-            android:textAlignment="center"
+            android:textAlignment="viewStart"
             android:textColor="@android:color/background_light"
-            android:textSize="30sp"
+            android:textSize="20sp"
             tools:layout_editor_absoluteX="134dp"
             tools:layout_editor_absoluteY="175dp" />
 
@@ -47,18 +59,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="setor"
-            android:textAlignment="center"
+            android:textAlignment="viewStart"
             android:textColor="@android:color/background_light"
-            android:textSize="30sp"
+            android:textSize="20sp"
             tools:layout_editor_absoluteX="134dp"
             tools:layout_editor_absoluteY="120dp" />
     </LinearLayout>
 
     <ListView
         android:id="@+id/lvEventos"
-        android:layout_width="368dp"
-        android:layout_height="389dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="170dp" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
