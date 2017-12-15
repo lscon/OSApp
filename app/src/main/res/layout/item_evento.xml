@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/gradient_item_chamado"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/imagem"
+            android:scaleType="fitXY"
+            android:src="@drawable/chamado"
+            android:layout_margin="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="descricao"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvAutorCadastro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="autorCadastro"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvDataRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="dataRegistro"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -34,15 +34,15 @@ public class ActivityDetalhe extends AppCompatActivity {
         tvUsuario.setText(usuario);
     }
 
-    private ArrayList<Evento> adicionaChamados() {
+    private ArrayList<Evento> adicionaEventos() {
 
-        ArrayList<Evento> chamados = new ArrayList<Evento>();
+        ArrayList<Evento> eventos = new ArrayList<Evento>();
 
         Evento c = new Evento("Fonte substituida", "Rosevaldo",
                 "10/10;2017");
-        chamados.add(c);
+        eventos.add(c);
 
-        return chamados;
+        return eventos;
     }
 
 }
