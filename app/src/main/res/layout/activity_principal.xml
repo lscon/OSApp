@@ -19,7 +19,7 @@
         android:text="Chamados"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/background_light"
         android:textSize="35dp"
         android:textStyle="bold|italic" />
 
