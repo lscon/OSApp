@@ -10,6 +10,8 @@ public class Chamado {
 
     public Chamado(String descricao, String categoria, String setor, String usuario, String dataRegistro) {
         this.descricao = descricao;
+        this.categoria = categoria;
+        this.setor = setor;
         this.usuario = usuario;
         this.dataRegistro = dataRegistro;
     }

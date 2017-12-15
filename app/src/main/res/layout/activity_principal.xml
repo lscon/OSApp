@@ -10,17 +10,18 @@
 
     <TextView
         android:id="@+id/tvChamados"
-        android:layout_width="wrap_content"
+        android:layout_width="287dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/lvChamados"
         android:layout_marginStart="20dp"
         android:layout_marginTop="25dp"
         android:text="Chamados"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:textAllCaps="true"
         android:textColor="@android:color/black"
-        android:textSize="35dp" />
+        android:textSize="35dp"
+        android:textStyle="bold|italic" />
 
     <ListView
         android:id="@+id/lvChamados"

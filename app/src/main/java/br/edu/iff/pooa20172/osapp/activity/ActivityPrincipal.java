@@ -49,6 +49,46 @@ public class ActivityPrincipal extends AppCompatActivity {
                 "Tesouraria", "Pedro", "11/12/2017");
         chamados.add(c);
 
+        Chamado c1= new Chamado("PC não liga", "Hardware",
+                "Tesouraria", "Pedro", "11/12/2017");
+        chamados.add(c1);
+
+        Chamado c2 = new Chamado("PC não liga", "Hardware",
+                "Tesouraria", "Pedro", "11/12/2017");
+        chamados.add(c2);
+
+        Chamado c3 = new Chamado("PC não liga", "Hardware",
+                "Tesouraria", "Pedro", "11/12/2017");
+        chamados.add(c3);
+
+        Chamado c4 = new Chamado("PC não liga", "Hardware",
+                "Tesouraria", "Pedro", "11/12/2017");
+        chamados.add(c4);
+
+        Chamado c5 = new Chamado("PC não liga", "Hardware",
+                "Tesouraria", "Pedro", "11/12/2017");
+        chamados.add(c5);
+
+        Chamado c6 = new Chamado("PC não liga", "Hardware",
+                "Tesouraria", "Pedro", "11/12/2017");
+        chamados.add(c6);
+
+        Chamado c8 = new Chamado("PC não liga", "Hardware",
+                "Tesouraria", "Pedro", "11/12/2017");
+        chamados.add(c8);
+
+        Chamado c7 = new Chamado("PC não liga", "Hardware",
+                "Tesouraria", "Pedro", "11/12/2017");
+        chamados.add(c7);
+
+        Chamado c9 = new Chamado("PC não liga", "Hardware",
+                "Tesouraria", "Pedro", "11/12/2017");
+        chamados.add(c9);
+
+        Chamado c10 = new Chamado("PC não liga", "Hardware",
+                "Tesouraria", "Pedro", "11/12/2017");
+        chamados.add(c10);
+
         return chamados;
     }
 }

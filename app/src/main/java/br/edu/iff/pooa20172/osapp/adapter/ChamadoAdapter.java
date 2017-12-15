@@ -35,13 +35,13 @@ public class ChamadoAdapter extends ArrayAdapter<Chamado> {
 
         View rowView = inflater.inflate(R.layout.item_chamado, parent, false);
 
-        TextView nomeEvento = (TextView) rowView.findViewById(R.id.tvDescricao);
-        TextView data = (TextView) rowView.findViewById(R.id.tvSetor);
-        TextView local = (TextView) rowView.findViewById(R.id.tvUsuario);
+        TextView descricao = (TextView) rowView.findViewById(R.id.tvDescricao);
+        TextView setor = (TextView) rowView.findViewById(R.id.tvSetor);
+        TextView usuario = (TextView) rowView.findViewById(R.id.tvUsuario);
 
-        nomeEvento.setText(elementos.get(position).getDescricao());
-        data.setText(elementos.get(position).getSetor());
-        local.setText(elementos.get(position).getUsuario());
+        descricao.setText(elementos.get(position).getDescricao());
+        setor.setText(elementos.get(position).getSetor());
+        usuario.setText(elementos.get(position).getUsuario());
         return rowView;
     }
 }
