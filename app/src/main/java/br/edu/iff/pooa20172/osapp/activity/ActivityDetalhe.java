@@ -6,7 +6,11 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 import br.edu.iff.pooa20172.osapp.R;
+import br.edu.iff.pooa20172.osapp.model.Chamado;
+import br.edu.iff.pooa20172.osapp.model.Evento;
 
 public class ActivityDetalhe extends AppCompatActivity {
 
@@ -29,4 +33,16 @@ public class ActivityDetalhe extends AppCompatActivity {
         tvSetor.setText(setor);
         tvUsuario.setText(usuario);
     }
+
+    private ArrayList<Evento> adicionaChamados() {
+
+        ArrayList<Evento> chamados = new ArrayList<Evento>();
+
+        Evento c = new Evento("Fonte substituida", "Rosevaldo",
+                "10/10;2017");
+        chamados.add(c);
+
+        return chamados;
+    }
+
 }
