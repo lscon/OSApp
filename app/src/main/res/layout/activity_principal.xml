@@ -26,7 +26,7 @@
     <ListView
         android:id="@+id/lvChamados"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="392dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="10dp"
@@ -36,5 +36,12 @@
         android:cacheColorHint="@android:color/black"
         android:footerDividersEnabled="false"
         android:headerDividersEnabled="false" />
+
+    <Button
+        android:id="@+id/btChamado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:text="Abrir chamado" />
 
 </LinearLayout>

@@ -1,11 +1,13 @@
 package br.edu.iff.pooa20172.osapp.activity;
 
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -22,6 +24,7 @@ public class ActivityPrincipal extends AppCompatActivity {
         setContentView(R.layout.activity_principal);
 
         ListView lista = (ListView) findViewById(R.id.lvChamados);
+        Button btAddChamado = (Button) findViewById(R.id.btChamado);
 
         final ArrayList<Chamado> chamados = adicionaChamados();
 
@@ -29,13 +32,27 @@ public class ActivityPrincipal extends AppCompatActivity {
 
         lista.setAdapter(adapter);
 
+        btAddChamado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Chamado chamado = new Chamado("Monitor não liga", "Hardware",
+                        "Tesouraria", "Pedro", "11/12/2017");
+
+                AlertDialog.Builder alert = new AlertDialog.Builder(ActivityPrincipal.this);
+                alert.setMessage("Descrição: " + chamado.getDescricao() + "\nUsuário:" + chamado.getUsuario() +
+                        "\nSetor: " + chamado.getSetor());
+                alert.setNeutralButton("OK", null);
+                alert.show();
+            }
+        });
+
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(ActivityPrincipal.this, ActivityDetalhe.class);
-                intent.putExtra("descricao", chamados.get(i).getDescricao());
-                intent.putExtra("setor", chamados.get(i).getSetor());
-                intent.putExtra("usuario", chamados.get(i).getUsuario());
+                intent.putExtra("descricao", "Descrição: " + chamados.get(i).getDescricao());
+                intent.putExtra("setor", "Setor: " + chamados.get(i).getSetor());
+                intent.putExtra("usuario", "Usuário: " + chamados.get(i).getUsuario());
                 startActivity(intent);
             }
         });
@@ -54,7 +71,7 @@ public class ActivityPrincipal extends AppCompatActivity {
         chamados.add(c1);
 
         Chamado c2 = new Chamado("PC não liga", "Hardware",
-                "Tesouraria", "Pedro", "11/12/2017");
+                "Tesouraria", "João", "11/12/2017");
         chamados.add(c2);
 
         Chamado c3 = new Chamado("PC não liga", "Hardware",
