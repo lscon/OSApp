@@ -52,7 +52,7 @@ public class ActivityDetalhe extends AppCompatActivity implements ClickRecyclerV
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ActivityDetalhe.this,AdiconaEventoActivity.class);
+                Intent intent = new Intent(ActivityDetalhe.this,AdicionaEventoActivity.class);
                 intent.putExtra("id",0);
                 startActivity(intent);
             }
