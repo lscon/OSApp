@@ -1,10 +1,14 @@
 package br.edu.iff.pooa20172.osapp.model;
 
+import java.io.Serializable;
+
+import io.realm.RealmObject;
+
 /**
  * Created by fazenda on 14/12/17.
  */
 
-public class Chamado {
+public class Chamado extends RealmObject implements Serializable {
 
     private String descricao, categoria, setor, usuario, dataRegistro;
 

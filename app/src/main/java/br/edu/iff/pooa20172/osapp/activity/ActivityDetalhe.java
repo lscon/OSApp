@@ -12,11 +12,15 @@ import java.util.ArrayList;
 
 import br.edu.iff.pooa20172.osapp.R;
 import br.edu.iff.pooa20172.osapp.adapter.ChamadoAdapter;
+import br.edu.iff.pooa20172.osapp.adapter.ClickRecyclerViewListener;
 import br.edu.iff.pooa20172.osapp.adapter.EventoAdapter;
 import br.edu.iff.pooa20172.osapp.model.Chamado;
 import br.edu.iff.pooa20172.osapp.model.Evento;
+import io.realm.Realm;
 
-public class ActivityDetalhe extends AppCompatActivity {
+public class ActivityDetalhe extends AppCompatActivity implements ClickRecyclerViewListener {
+
+    private Realm realm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
