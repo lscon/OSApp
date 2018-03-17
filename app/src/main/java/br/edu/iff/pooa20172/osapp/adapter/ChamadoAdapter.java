@@ -49,9 +49,9 @@ public class ChamadoAdapter extends RecyclerView.Adapter {
 
         Chamado chamado = chamados.get(position) ;
 
-        holder.descricao.setText(Chamado.getDescricao());
-        holder.setor.setText(Chamado.getSetor());
-        holder.usuario.setText(Chamado.getUsuario());
+        holder.descricao.setText(chamado.getDescricao());
+        holder.setor.setText(chamado.getSetor());
+        holder.usuario.setText(chamado.getUsuario());
 
 
 

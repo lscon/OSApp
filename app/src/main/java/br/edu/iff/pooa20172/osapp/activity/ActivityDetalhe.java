@@ -1,14 +1,19 @@
 package br.edu.iff.pooa20172.osapp.activity;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import br.edu.iff.pooa20172.osapp.R;
 import br.edu.iff.pooa20172.osapp.adapter.ChamadoAdapter;
@@ -41,24 +46,50 @@ public class ActivityDetalhe extends AppCompatActivity implements ClickRecyclerV
         tvSetor.setText(setor);
         tvUsuario.setText(usuario);
 
-        ListView lista = (ListView) findViewById(R.id.lvEventos);
+        realm = Realm.getDefaultInstance();
 
-        final ArrayList<Evento> eventos = adicionaEventos();
-
-        ArrayAdapter adapter = new EventoAdapter(this, eventos);
-
-        lista.setAdapter(adapter);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ActivityDetalhe.this,AdiconaEventoActivity.class);
+                intent.putExtra("id",0);
+                startActivity(intent);
+            }
+        });
     }
 
-    private ArrayList<Evento> adicionaEventos() {
+    private List<Evento> getEventos(){
 
-        ArrayList<Evento> eventos = new ArrayList<Evento>();
+        return (List)realm.where(Evento.class).findAll();
 
-        Evento c = new Evento("Fonte substituida", "Rosevaldo",
-                "10/10;2017");
-        eventos.add(c);
+    }
 
-        return eventos;
+    @Override
+    public void onClick(Object object) {
+        Evento evento = (Evento) object;
+        Intent intent = new Intent(ActivityDetalhe.this,AdicionaEventoActivity.class);
+        intent.putExtra("id",evento.getId());
+        startActivity(intent);
+
+    }
+
+    protected void onResume() {
+        super.onResume();
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rv_Eventos);
+
+        recyclerView.setAdapter(new EventoAdapter(getEventos(),this,this));
+        RecyclerView.LayoutManager layout = new LinearLayoutManager(this,
+                LinearLayoutManager.VERTICAL, false);
+
+        recyclerView.setLayoutManager(layout);
+
+
+    }
+
+    @Override
+    public void finish(){
+        realm.close();
     }
 
 }

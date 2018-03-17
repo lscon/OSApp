@@ -18,10 +18,11 @@ import java.util.List;
 
 import br.edu.iff.pooa20172.osapp.R;
 import br.edu.iff.pooa20172.osapp.adapter.ChamadoAdapter;
+import br.edu.iff.pooa20172.osapp.adapter.ClickRecyclerViewListener;
 import br.edu.iff.pooa20172.osapp.model.Chamado;
 import io.realm.Realm;
 
-public class ActivityPrincipal extends AppCompatActivity {
+public class ActivityPrincipal extends AppCompatActivity implements ClickRecyclerViewListener {
 
     private Realm realm;
 
@@ -32,10 +33,11 @@ public class ActivityPrincipal extends AppCompatActivity {
 
         Button btAddChamado = (Button) findViewById(R.id.btChamado);
 
+        realm = Realm.getDefaultInstance();
         btAddChamado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent((ActivityPrincipal.this, ActivityDetalhe.class);
+                Intent intent = new Intent(ActivityPrincipal.this, ActivityDetalhe.class);
                 intent.putExtra("id",0);
                 startActivity(intent);
             }

@@ -10,14 +10,20 @@ import io.realm.RealmObject;
 
 public class Chamado extends RealmObject implements Serializable {
 
+    private int id;
     private String descricao, categoria, setor, usuario, dataRegistro;
 
-    public Chamado(String descricao, String categoria, String setor, String usuario, String dataRegistro) {
+    public Chamado( int id, String descricao, String categoria, String setor, String usuario, String dataRegistro) {
+        this.id = id;
         this.descricao = descricao;
         this.categoria = categoria;
         this.setor = setor;
         this.usuario = usuario;
         this.dataRegistro = dataRegistro;
+    }
+
+    public Chamado(){
+
     }
 
     public String getDescricao() {
@@ -26,6 +32,14 @@ public class Chamado extends RealmObject implements Serializable {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCategoria() {
