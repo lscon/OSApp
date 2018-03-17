@@ -23,8 +23,8 @@
         android:textSize="35dp"
         android:textStyle="bold|italic" />
 
-    <ListView
-        android:id="@+id/lvChamados"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_Chamados"
         android:layout_width="match_parent"
         android:layout_height="392dp"
         android:layout_alignParentStart="true"
