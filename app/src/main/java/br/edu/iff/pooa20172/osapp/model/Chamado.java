@@ -22,6 +22,13 @@ public class Chamado extends RealmObject implements Serializable {
         this.dataRegistro = dataRegistro;
     }
 
+    public Chamado( int id, String descricao, String setor, String dataRegistro) {
+        this.id = id;
+        this.descricao = descricao;
+        this.setor = setor;
+        this.dataRegistro = dataRegistro;
+    }
+
     public Chamado(){
 
     }

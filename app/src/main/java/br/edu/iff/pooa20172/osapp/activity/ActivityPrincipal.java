@@ -34,6 +34,7 @@ public class ActivityPrincipal extends AppCompatActivity implements ClickRecycle
         Button btAddChamado = (Button) findViewById(R.id.btChamado);
 
         realm = Realm.getDefaultInstance();
+
         btAddChamado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
